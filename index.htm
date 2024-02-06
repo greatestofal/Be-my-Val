@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Val??? ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>My Love,</strong>
+                        <p>In the journey of life, you've been my constant source of joy, love, and
+                            companionship for 5 beautiful years. With each passing day, my love for you grows deeper
+                            and stronger. You are the light that brightens my darkest days, the melody that
+                            fills my silent nights, and the warmth that comforts my soul. So, on this special day of
+                            love, I ask you with all my heart, will you be my Valentine? </p>
+                        <p>Forever and always, yours.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const letter = document.querySelector('.letter');
+        const heart = document.querySelector('.heart');
+
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            // Toggle z-index of letter to be on top when envelope is opened
+            letter.style.zIndex = envelope.classList.contains('flap') ? '4' : '';
+        });
+
+        heart.addEventListener('click', () => {
+            heart.classList.toggle('drop');
+        });
+    </script>
+
+
+</body>
+
+</html>
